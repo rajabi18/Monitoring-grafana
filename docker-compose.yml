@@ -71,8 +71,8 @@ services:
       - monitoring-net
     ports:
       - "9080:9080"  # پورت برای HTTP Promtail (در صورت نیاز)
-      - "10514:514/udp"  # باز کردن پورت 514 برای Syslog
-      - "10514:514/tcp"  # اگر نیاز است، TCP را هم باز کنید
+      - "514:514/udp"  # باز کردن پورت 514 برای Syslog
+      - "514:514/tcp"  # اگر نیاز است، TCP را هم باز کنید
     command:
       - -config.file=/etc/promtail/promtail-config.yaml
       - -log.level=debug
